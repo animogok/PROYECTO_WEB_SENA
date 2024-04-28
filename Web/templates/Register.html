@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href={% static "css/signInStyles.css" %}>
+    <title>Register</title>
+</head>
+<body id="body">
+    <nav class="pageNav">
+        <a href={% url "home" %} class = "pageNav_L"><button class="pageNav_b">Home</button></a>
+        <a href="/maps" class = "pageNav_M"><button class="pageNav_b">Locations</button></a>
+        <a href="/restaurant_menu" class ="pageNav_M"><button class="pageNav_b">Menu</button></a>
+        <a href="/Booking" class= "pageNav_B"><button class="pageNav_b"> Booking</button></a>
+        <a href="/contacts" class="pageNav_C"><button class="pageNav_b">Contact Us</button></a>
+        <a href="/account_settings" class="pageNav_S"><button class="pageNav_b">Settings</button></a>
+    </nav>
+
+    <header class = "signInTitle">
+        <h1>Sign In</h1>
+    </header>
+    
+    <main class = "main">
+        <div class ="signInBlock" id="register">
+            <form method="POST" class="registerForm">
+                {% csrf_token %}
+                <div class="registerNameIn">
+                    <h3 class ="signInFormsFieldNames">Name</h3>
+                    {{form.firsName}}
+                </div>         
+                <div class="registerLastNIn">
+                    <h3 class ="signInFormsFieldNames">LastName</h3>
+                    {{form.lastName}}
+                </div>
+                <div class="registerEmailIn">
+                    <h3 class ="signInFormsFieldNames">Email</h3>
+                    {{form.email}}
+                </div>
+                <div class="registerIdnumberIn">
+                    <h3 class ="signInFormsFieldNames">ID Number</h3>
+                    {{form.idNumber}}
+                </div>
+                <div class="registerPasswordIn">
+                    <h3 class ="signInFormsFieldNames_P">Password</h3>
+                    {{form.password}}
+                </div>
+                <div class="registerBorndayIn">
+                    <h3 class="signInFormsFieldNames_B">Birth date</h3>
+                    {{form.birth_date}}
+                </div>
+                <div class="submitRegForm">
+                    <button class="createAccount_B" type="input">Create Account</button>
+                </div>
+            </form>
+            <div class="loginLink" >
+                <a href={% url "login" %} style ="color:RGB(255,255,255)">Login</a>
+            </div>
+        </div>
+    </main>
+    <aside>
+    </aside>
+    <footer class ="page_footer"><p class="politics_n_conditions" style="color:RGB(255,255,255)">
+        The "Company" not allow the comersialization of its products....
+        </p>
+       </footer>
+</body>
+</html>

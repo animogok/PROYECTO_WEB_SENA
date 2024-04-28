@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/home.css" %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+<nav class ="PageNav">
+    <a href="">HOME</a>
+    <a href="">BOOKINGS</a>
+    <a href="">MENU</a>
+    <a href={% url "signIn" %}>Sign In</a>
+    <a href={% url "login" %}>Login</a>
+    <a href="">OPTIONS</a>
+</nav>
+<main class="PageMainInfo">
+<img id ="homeImage" src="{% static "images/material-vajilla.jpg" %}" alt="Home Image">
+    <h1>
+        Restaurant
+    </h1>
+
+<img id = "QualityInfoImage" src="{% static "images/imagen 2.jpg" %}" alt="Quality Image">
+    <article class ="qualityInformation">
+        <h2 class = "q_title">
+            CALIDAD EN CADA BOCADO
+            <hr>
+        </h2>
+        <p class = "Quality_p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit culpa asperiores cupiditate similique iusto vel cumque delectus eum suscipit enim dolore omnis perferendis adipisci, atque in totam maxime possimus porro?
+        </p>
+    </article>
+
+<img id="RecomendationImage" src="{% static "images/imagen 3.webp" %}" alt="Recomendation Image">
+    <article class = "recommendation">
+        <h2 class = "r_tittle">
+            PLATOS QUE TE ENCANTARAN
+            <hr>
+        </h2>
+        <p class="recommendation_p">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem assumenda quaerat adipisci magni deleniti. Corporis pariatur, blanditiis est excepturi nulla, facilis eligendi illo exercitationem delectus, cum deserunt culpa. Itaque, est?
+        </p>
+    </article>    
+</main>
+
+<footer>
+
+    <h2 class="slogan">
+        EAT GOOD <br> AND <br> LIVE GOOD
+    </h2>
+
+    <div class="l_footer">
+        <p class="lf_contact">
+            Contact us For more Information
+        </p>
+        <p class ="lf_terms">
+            terms and contiditions
+        </p>
+
+        <div class ="QA">
+            <p class="p_QA">Ayudanos a mejorar</p>
+            <form class ="QAf" method="post">
+                {% csrf_token %}
+                <input type="text" name="QA" id="QA_input">
+            </form>
+        </div>
+        <img class ="igimage" src="{% static "images/Instragram.png" %}" alt="Instagram Image">
+    </div>
+</footer>
+</body>
+</html>

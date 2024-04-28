@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static "css/loginStyles.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+<body class="loginBody">
+    <nav class="pageNav">
+        <a href={% url "home" %} class = "pageNav_L"><button class="pageNav_b">Home</button></a>
+        <a href="/maps" class = "pageNav_M"><button class="pageNav_b">Locations</button></a>
+        <a href="/restaurant_menu" class ="pageNav_M"><button class="pageNav_b">Menu</button></a>
+        <a href="/Booking" class= "pageNav_B"><button class="pageNav_b"> Booking</button></a>
+        <a href="/contacts" class="pageNav_C"><button class="pageNav_b">Contact Us</button></a>
+        <a href="/account_settings" class="pageNav_S"><button class="pageNav_b">Settings</button></a>
+    </nav>
+
+    <header class ="loginTitle">
+        <h1><strong>LOGIN</strong></h1>
+    </header>
+
+   <main class="main">
+
+        <form action="post" class="loginForms" >
+            {% csrf_token %}
+
+            <div class ="l_f_e">
+                <h3 class ="loginFormsFieldNames">Email  </h3>
+                <input class = "loginFormsEmail" type="email" placeholder="Enter your email"  size=60 required>
+            </div>
+
+            <div class ="l_f_p">
+                <h3 class ="loginFormsFieldNames">Password</h3>
+                <input class="loginFormsPassword" type="password" placeholder="Enter your password" size=60 required>
+            </div>
+
+            <button class="button_l_submit" type = "submit">Login</button><br>
+            <a href="Password_recuperation" class = "passwordRecover">Forgot Password?</a>
+            
+        </form>
+
+        <a href={% url "signIn" %} style ="color:RGB(255,255,255)">Register for free</a>
+        
+        
+        <div class="logWithFields">
+            <div class = "logWith__boxes">
+                <p class="Lwf_text">Log with</p>
+                <div class="logWithgoogle">
+                    <a href="login_google_api">
+                        <button class="background_color_logos">
+                            <img src=""id="Google_IMG_logIn" alt="google_logo">
+                        </button>
+                    </a>
+                </div>
+                <div class="logWithmicrosoft">
+                    <a href="login_microsoft_api">
+                        <button class="background_color_logos">
+                            <img src="" id="Microsoft_IMG_logIn" alt="microsoftLogo">
+                        </button>
+                    </a>
+                </div>
+                <div class="logWithfacebook">
+                    <a href="login_meta_api">
+                        <button class="background_color_logos">
+                            <img src="" id="Facebook_IMG_logIn" alt="facebookLogo">
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+   </main>
+   <footer class ="page_footer"><p class="politics_n_conditions" style="color:RGB(255,255,255)">
+    The "Company" not allow the comersialization of its products....
+    </p>
+   </footer>
+   <aside>
+   </aside>
+</body>
+</html>
