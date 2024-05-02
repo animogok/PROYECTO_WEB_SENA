@@ -21,7 +21,9 @@ from Web import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login_app/', views.login, name="login"),
-    path('sign_in/', views.register, name="signIn"),
-    path('', views.home, name="home")
+    path('login-app/', views.login, name="login"),
+    path('sign-in/', views.register, name="signIn"),
+    path('', views.home, name="home"),
+    path('menu-restaurant/', views.menu, name="menu"),
+    path('list-booking', views.booking, name="booking")
 ]

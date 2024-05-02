@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/menu.css" %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{restaurant} menu+</title>
+</head>
+<body>
+    <nav class ="PageNav">
+        <a href={% url "home" %}>HOME</a>
+        <a href={% url "booking" %}>BOOKINGS</a>
+        <a href={% url "menu" %}>MENU</a>
+        <a href={% url "signIn" %}>Sign In</a>
+        <a href={% url "login" %}>Login</a>
+        <a href="">OPTIONS</a>
+    </nav>
+
+    <main>
+        <div class="drinks">
+            <img src="{% static "images/Bebidas.jpg" %}" class="drinksImage"alt="Drink Image"/>
+            <h2 class="drinks_h2">
+                BEBIBAS
+            </h2>
+        </div>
+        <div class="food">
+            <img src="{% static "images/platillos.jpg" %}" class="foodImage" alt="Food Image"/>
+            <h2 class="food_h2">
+                COMIDA
+            </h2>
+        </div>
+        <div class="degustation">
+            <img src="{% static "images/degustaciones.jpg" %}" class="degustationImage" alt="Drink Image" />
+            <h2 class="degustation_h2">
+                DEGUSTACIONES
+            </h2>
+        </div>
+    </main>
+
+</body>
+</html>
