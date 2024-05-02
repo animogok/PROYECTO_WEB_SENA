@@ -1,0 +1,206 @@
+body{
+    font-family: "Inter", "Sans-serif";
+    margin: 0%;
+    padding: 0%;
+    background-image: url("../images/material-vajilla.jpg");
+    background-size: cover;
+    height: 100vh;
+    padding-bottom: 10vh;
+
+    
+}
+.signInTitle{
+    color: #ffffff;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+
+.registerForm{
+    background-color: #6E5B48;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 4%;
+    border-radius: 1vh;
+    height: fit-content;
+}
+
+.fieldNames, .fieldSurname, .fieldemail, .fieldId, .fieldpassword{
+    color: #ffffff;
+    margin: 0%;
+}
+
+#id_firsName, #id_lastName, #id_email, #id_idNumber, #id_password{
+    border-radius: 1vh;
+    border-color: #332f2c;
+    border-style: solid;
+    background-color: #897868;
+}
+
+.submit{
+    color: #ffffff;
+    font-weight: bolder;
+    margin-top: 10%;
+    background-color: #863B0A;
+    border-radius: 0.5vh;
+    border-style: solid;
+    border-color: #332f2c;
+}
+
+.loginLink{
+    width: fit-content;
+    margin-top: 5%;
+}
+
+@media only screen and (min-width : 264px){
+
+    .signInTitle{
+        position: relative;
+        top: 18vh;
+        font-size: 2em;
+    }
+
+    .registerForm{
+        position: relative;
+        top: 18vh;
+    }
+
+    .fieldNames, .fieldSurname, .fieldemail, .fieldId, .fieldpassword{
+        font-size: 1.5em;
+    }
+
+    #id_firsName, #id_lastName, #id_email, #id_idNumber, #id_password{
+        margin-bottom: 5%;
+        height: 2.5vh;
+        width: 45vw;
+    }
+
+    .submit{
+       box-shadow: 0.5vw 0.5vh 1vw #000000;
+    }
+}
+
+@media only screen and (min-width : 568px){
+    .signInTitle{
+        position: relative;
+        top: 16vh;
+        font-size: 2.3em;
+    }
+
+    .registerForm{
+        position: relative;
+        top: 16vh;
+    }
+
+    .fieldNames, .fieldSurname, .fieldemail, .fieldId, .fieldpassword{
+        font-size: 1.8em;
+    }
+
+    #id_firsName, #id_lastName, #id_email, #id_idNumber, #id_password{
+        margin-bottom: 5%;
+        height: 2.5vh;
+        width: 45vw;
+    }
+
+    .submit{
+       font-size: 1.3em; 
+       box-shadow: 0.5vw 0.5vh 1vw #000000;
+    }
+}
+
+@media only screen and (min-width : 768px){
+    .signInTitle{
+        position: relative;
+        top: 6vh;
+        font-size: 2.6em;
+    }
+
+    .registerForm{
+        position: relative;
+        top: 6vh;
+    }
+
+    .fieldNames, .fieldSurname, .fieldemail, .fieldId, .fieldpassword{
+        font-size: 2.1em;
+    }
+
+    #id_firsName, #id_lastName, #id_email, #id_idNumber, #id_password{
+        margin-bottom: 5%;
+        height: 3vh;
+        width: 45vw;
+    }
+
+    .submit{
+       font-size: 1.3em; 
+       box-shadow: 0.5vw 0.5vh 1vw #000000;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+
+    .signInTitle{
+        position: relative;
+        font-size: 2.6em;
+    }
+
+    .registerForm{
+        position: relative;
+    }
+
+    .fieldNames, .fieldSurname, .fieldemail, .fieldId, .fieldpassword{
+        font-size: 2.1em;
+    }
+
+    #id_firsName, #id_lastName, #id_email, #id_idNumber, #id_password{
+        margin-bottom: 5%;
+        height: 3vh;
+        width: 45vw;
+    }
+
+    .submit{
+       font-size: 1.3em; 
+       box-shadow: 0.5vw 0.5vh 1vw #000000;
+    }
+}
+
+@media only screen and (min-width : 1280px){
+
+    body{
+        padding-top: 0%;
+        height: 120vh;
+    }
+    .signInTitle{
+        margin-top: 0%;
+        position: relative;
+        font-size: 2.6em;
+    }
+
+    .registerForm{
+        position: relative;
+        bottom: 5vh;
+        padding-bottom: 0%;
+    }
+
+    .fieldNames, .fieldSurname, .fieldemail, .fieldId, .fieldpassword{
+        font-size: 2.1em;
+    }
+
+    #id_firsName, #id_lastName, #id_email, #id_idNumber, #id_password{
+        margin-bottom: 5%;
+        height: 3vh;
+        width: 45vw;
+    }
+
+    .submit{
+        margin-top: 5%;
+       font-size: 1.5em; 
+       margin-bottom: 0%;
+       box-shadow: 0.5vw 0.5vh 1vw #000000;
+    }
+    .loginLink{
+        margin-top: 5%;
+        height: 4vh;
+    }
+}

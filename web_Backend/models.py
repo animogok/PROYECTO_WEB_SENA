@@ -10,9 +10,8 @@ class User_registrations(AbstractBaseUser ):
 
     firsName = models.CharField(blank = False)
     lastName = models.CharField( blank = False)
-    idNumber = models.IntegerField(unique = True)
+    idNumber = models.CharField(unique = True)
     email = models.EmailField(blank = False, unique = True)
-    birth_date = models.DateField(blank = False, unique = False, default = "YYYY-MM-DD")
     date_joined = models.DateTimeField(default = timezone.now)
     password = models.CharField(blank = False, unique = False)
     is_staff = models.BooleanField(default = False)
