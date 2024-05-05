@@ -1,7 +1,7 @@
 body{
     margin: 0%;
     background-color: #C5AE96;
-    height: 100vh;
+    height: 110vh;
 }
 
 .PageNav{
@@ -12,24 +12,32 @@ body{
 }
 
 .drinks, .food, .degustation{
+    position: relative;
     display: inline-block;
     width: fit-content;
     height: fit-content;
+    margin-left: 14%;
 }
 
 .drinksImage, .foodImage, .degustationImage{
-    height: 70vh;
+    height: 80vh;
     width: 15vw;
     object-fit: cover;
     border-radius: 2vh;
-    margin-left: 15vw;
 
     box-shadow: 1vw 1vh 1vh #000000;
 }
-.drinks_h2{
+
+.drinks_h2, .food_h2, .degustation_h2{
+    margin: 0%;
+    position: absolute;
     color: #ffffff;
+    background-color: RGBA(0,0,0,0.5);
     writing-mode: vertical-rl;
     text-orientation: upright;
+    border-radius: 2vh;
 
-    font-size: 4rem;
+    font-size: 8vh;
+    left: 35%;
+    top: 8%;
 }

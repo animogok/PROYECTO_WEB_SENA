@@ -17,13 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from Web import views
+from Web import views as vws
+from web_Backend import views as vwsb
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login-app/', views.login, name="login"),
-    path('sign-in/', views.register, name="signIn"),
-    path('', views.home, name="home"),
-    path('menu-restaurant/', views.menu, name="menu"),
-    path('list-booking', views.booking, name="booking")
+    path('login-app/', vws.login, name="login"),
+    path('sign-in/', vws.register, name="signIn"),
+    path('', vws.home, name="home"),
+    path('menu-restaurant/', vws.menu, name="menu"),
+    path('list-booking', vws.booking, name="booking"),
+    
 ]
