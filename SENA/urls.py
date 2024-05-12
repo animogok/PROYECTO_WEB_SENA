@@ -22,8 +22,8 @@ from web_Backend import views as vwsb
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login-app/', vws.login, name="login"),
-    path('sign-in/', vws.register, name="signIn"),
+    path('login-app/', vwsb.login, name="login"),
+    path('sign-in/', vwsb.register, name="signIn"),
     path('', vws.home, name="home"),
     path('menu-restaurant/', vws.menu, name="menu"),
     path('list-booking', vws.booking, name="booking"),

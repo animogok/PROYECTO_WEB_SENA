@@ -169,7 +169,7 @@ body{
 
     body{
         padding-top: 0%;
-        height: 120vh;
+        height: 130vh;
     }
     .signInTitle{
         margin-top: 0%;
@@ -189,7 +189,7 @@ body{
 
     #id_firsName, #id_lastName, #id_email, #id_idNumber, #id_password{
         margin-bottom: 5%;
-        height: 3vh;
+        height: 5vh;
         width: 45vw;
     }
 

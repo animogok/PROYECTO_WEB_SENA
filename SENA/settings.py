@@ -119,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'web_Backend.User_registrations'
+AUTH_USER_MODEL = "web_Backend.User_registrations"
 
 PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.BCryptPasswordHasher',
