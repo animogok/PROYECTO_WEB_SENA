@@ -1,0 +1,476 @@
+body{
+    font-family: "Inter", "Sans-serif";
+    margin: 0%;
+    padding: 0%;
+    background-image: url("../images/material-vajilla.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+.loginTitle{
+    color: #ffffff;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+
+.loginForms{
+    background-color: #6E5B48;
+    width: fit-content;
+    padding: 5%;
+    margin: auto;
+    border-radius: 2vh;
+}
+
+.fieldPassword, .fieldEmail{
+    color: #ffffff;
+    margin-bottom: 2%;
+    margin-top: 1%;
+    font-weight: bolder;
+    
+}
+
+#id_password, #id_email{
+    border-radius: 1vh;
+    border-color: #332f2c;
+    border-style: solid;
+    background-color: #897868;    
+}
+.formEmail::placeholder, .formPassword::placeholder{color: black;}
+
+.submit{
+    margin-top: 1%;
+    background-color: #863B0A;
+    border-radius: 0.5vh;
+    border-style: solid;
+    border-color: #332f2c;
+}
+
+@media only screen and (min-width : 264px){
+    
+    main{
+        position: relative;
+        top: 15vh;
+    }
+
+    .loginTitle{
+        font-size: 2em;
+    }
+
+    .loginForms{
+        width: 70vw;
+
+    }
+
+    .email{
+        margin-bottom: 15%;
+    }
+
+    .fieldEmail{
+        font-size: 1.8em;
+    }
+
+    .fieldPassword{
+        font-size: 1.8em;
+    }
+
+    #id_password, #id_emails{
+        width: 65vw;
+        height: 2.5vh;
+    }
+    
+    .submit{
+        font-size: 1.3em;
+        position: absolute;
+        right: 19vw;
+        margin-top: 2%;
+        box-shadow: 0.5vh 0.8vw 0.5vh #000;
+    }
+
+    .links{
+        position: relative;
+        bottom: 2.5vh;
+        width: 95%;
+    }
+
+    .passwordRecover{
+        color:#ffffff;
+        font-weight: bold;
+        font-size: 0.8em;
+
+        margin: 0%;
+    }
+
+    .registerLink{
+        display: block;
+        font-weight: bold;
+        font-size: 0.8em;
+        border-radius: 0.5vh;
+        background-color: #222222;
+
+        margin-top: 4%;
+        padding: 2%;
+        width: fit-content;
+    }
+
+    .Lwf_text{
+        margin-top: 10%;
+        margin-bottom: 0%;
+        color: #ffffff;
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
+
+    .logGoogle, .logMicrosoft{
+        display: inline-block;
+        margin-right: 5%;
+        margin-top: 2%;
+    }
+
+    #googleIMG, #microsoftIMG {
+        background-color: transparent;
+    }
+
+}
+
+@media only screen and (min-width : 568px){
+    main{
+        position: relative;
+        top: 15vh;
+    }
+
+    .loginTitle{
+        font-size: 2.3em;
+    }
+
+    .loginForms{
+        width: 70vw;
+
+    }
+
+    .email{
+        margin-bottom: 13%;
+    }
+
+    .fieldEmail{
+        font-size: 2em;
+    }
+
+    .fieldPassword{
+        font-size: 2em;
+    }
+
+    #id_password, #id_email{
+        width: 65vw;
+        height: 3.3vh;
+    }
+
+    .submit{
+        margin-top: 2%;
+        margin-left: 83%;
+        box-shadow: 0.5vh 0.8vw 0.5vh #000;
+    }
+
+    .links{
+        position: relative;
+        bottom: 2vh;
+        width: 74%;
+    }
+
+    .passwordRecover{
+        color:#ffffff;
+        font-weight: bold;
+        font-size: 1em;
+
+        margin: 0%;
+    }
+
+    .registerLink{
+        display: block;
+        font-weight: bold;
+        font-size: 1em;
+        border-radius: 0.5vh;
+        background-color: #222222;
+
+        margin-top: 4%;
+        padding: 2%;
+        width: fit-content;
+    }
+
+    .Lwf_text{
+        margin-top: 10%;
+        margin-bottom: 0%;
+        color: #ffffff;
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
+
+    .logGoogle, .logMicrosoft{
+        display: inline-block;
+        margin-right: 5%;
+        margin-top: 2%;
+    }
+
+    #googleIMG, #microsoftIMG {
+        background-color: transparent;
+    }
+}
+
+@media only screen and (min-width : 768px){
+    main{
+        position: relative;
+        top: 15vh;
+    }
+
+    .loginTitle{
+        font-size: 2.8em;
+    }
+
+    .loginForms{
+        width: 70vw;
+
+    }
+
+    .email{
+        margin-bottom: 10%;
+    }
+
+    .fieldEmail{
+        font-size: 2.3em;
+    }
+
+    .fieldPassword{
+        font-size: 2.3em;
+    }
+
+    #id_password, #id_email{
+        width: 65vw;
+        height: 4vh;
+    }
+
+    .submit{
+        padding: 1%;
+        font-size: 1.5em;
+        font-weight: bolder;
+        margin-top: 2%;
+        margin-left: 81%;
+        box-shadow: 0.5vh 0.8vw 0.5vh #000;
+    }
+
+    .links{
+        position: relative;
+        bottom: 2vh;
+        width: 74%;
+    }
+
+    .passwordRecover{
+        color:#ffffff;
+        font-weight: bold;
+        font-size: 1.2em;
+
+        margin: 0%;
+    }
+
+    .registerLink{
+        display: block;
+        font-weight: bold;
+        font-size: 1.2em;
+        border-radius: 0.5vh;
+        background-color: #222222;
+
+        margin-top: 3%;
+        padding: 2%;
+        width: fit-content;
+    }
+
+    .Lwf_text{
+        margin-top: 10%;
+        margin-bottom: 0%;
+        color: #ffffff;
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
+
+    .logGoogle, .logMicrosoft{
+        display: inline-block;
+        margin-right: 5%;
+        margin-top: 2%;
+    }
+
+    #googleIMG, #microsoftIMG {
+        background-color: transparent;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    main{
+        position: relative;
+        top: 5vh;
+    }
+
+    .loginTitle{
+        font-size: 3.0em;
+    }
+
+    .loginForms{
+        width: 70vw;
+
+    }
+
+    .email{
+        margin-bottom: 6%;
+    }
+
+    .fieldEmail{
+        font-size: 2.8em;
+    }
+
+    .fieldPassword{
+        font-size: 2.8em;
+    }
+
+    #id_password, #id_email{
+        width: 65vw;
+        height: 4.5vh;
+    }
+
+    .submit{
+        padding: 1%;
+        font-size: 1.5em;
+        font-weight: bolder;
+        margin-top: 2%;
+        margin-left: 84%;
+        box-shadow: 0.5vh 0.8vw 0.5vh #000;
+    }
+
+    .links{
+        position: relative;
+        bottom: 2vh;
+        width: 74%;
+    }
+
+    .passwordRecover{
+        color:#ffffff;
+        font-weight: bold;
+        font-size: 1.2em;
+
+        margin: 0%;
+    }
+
+    .registerLink{
+        display: block;
+        font-weight: bold;
+        font-size: 1.2em;
+        border-radius: 0.5vh;
+        background-color: #222222;
+
+        margin-top: 3%;
+        padding: 2%;
+        width: fit-content;
+    }
+
+    .Lwf_text{
+        margin-top: 10%;
+        margin-bottom: 0%;
+        color: #ffffff;
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
+
+    .logGoogle, .logMicrosoft{
+        display: inline-block;
+        margin-right: 5%;
+        margin-top: 2%;
+    }
+
+    #googleIMG, #microsoftIMG {
+        background-color: transparent;
+    }
+}
+
+@media only screen and (min-width : 1280px){
+    main{
+        position: relative;
+        top: 3vh;
+    }
+
+    .loginTitle{
+        font-size: 3.2em;
+    }
+
+    .loginForms{
+        width: 70vw;
+
+    }
+
+    .email{
+        margin-bottom: 6%;
+    }
+
+    .fieldEmail{
+        font-size: 3.0em;
+    }
+
+    .fieldPassword{
+        font-size: 3.0em;
+    }
+
+    #id_password, #id_email{
+        width: 65vw;
+        height: 4.8vh;
+    }
+
+    .submit{
+        padding: 1%;
+        font-size: 1.5em;
+        font-weight: bolder;
+        margin-top: 2%;
+        margin-left: 84%;
+        box-shadow: 0.2vh 0.6vw 1vh #000;
+    }
+
+    .links{
+        position: relative;
+        bottom: 2vh;
+        width: 74%;
+    }
+
+    .passwordRecover{
+        color:#ffffff;
+        font-weight: bold;
+        font-size: 1.2em;
+
+        margin: 0%;
+    }
+
+    .registerLink{
+        display: block;
+        font-weight: bold;
+        font-size: 1.2em;
+        border-radius: 0.5vh;
+        background-color: #222222;
+
+        margin-top: 3%;
+        padding: 2%;
+        width: fit-content;
+    }
+
+    .Lwf_text{
+        margin-top: 10%;
+        margin-bottom: 0%;
+        color: #ffffff;
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
+
+    .logGoogle, .logMicrosoft{
+        display: inline-block;
+        margin-right: 5%;
+        margin-top: 2%;
+    }
+
+    #googleIMG, #microsoftIMG {
+        background-color: transparent;
+    }
+}

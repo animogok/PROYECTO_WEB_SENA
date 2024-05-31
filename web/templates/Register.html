@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href={% static "css/register.css" %}>
+    <title>Register</title>
+</head>
+<body>
+
+    <main>
+        <header class = "signInTitle">
+            <h1>Sign In</h1>
+        </header>
+
+            <form method="POST" class="registerForm">
+                
+                <div class="firstName">
+                    <h3 class ="fieldNames">Name</h3>
+                    {{form.firsName}}
+                </div>    
+
+                <div class="lastName">
+                    <h3 class ="fieldSurname">LastName</h3>
+                    {{form.lastName}}
+                </div>
+
+                <div class="email">
+                    <h3 class ="fieldemail">Email</h3>
+                    {{form.email}}
+                </div>
+
+                <div class="idNumber">
+                    <h3 class ="fieldId">ID Number</h3>
+                    {{form.idNumber}}
+                </div>
+
+                <div class="password">
+                    <h3 class ="fieldpassword">Password</h3>
+                    {{form.password}}
+                </div>
+
+                <button class="submit" type="input">Create Account</button>
+                
+                <div class="loginLink" >
+                    <a href={% url "login" %} style ="color:RGB(255,255,255)">Login</a>
+                </div>
+
+            </form>
+        
+    </main>
+
+</body>
+</html>
