@@ -37,17 +37,15 @@ class RegisterView(APIView):
         return render(request, 'Register.html', {'form': form})
 
     def post(self, request):
-        user = User_registrations.objects.get(email = serializer.data['email'])
-        
         form = FormularioRegistrodeUsuarios(request.POST)
         serializer = Userserializer(data=request.data)
         
         if serializer.is_valid():
-            
             serializer.save()
-            
+            user = User_registrations.objects.get(email = serializer.data['email'])
             user.set_password(serializer.data['password'])
             user.save()
+    
             Token.objects.create(user = user)
             
             return Response({"user" : serializer.data}, status=status.HTTP_201_CREATED)
@@ -67,7 +65,7 @@ class Loginview(APIView):
         user = get_object_or_404(User_registrations, email = self.request.data['email'])
         
         if not user.check_password(self.request.data['password']):
-            return Response(status=status.HTTP_401_UNAUTHORIZED)
+            return Response({"error": "incorrect password"},status=status.HTTP_401_UNAUTHORIZED)
         
         token, created = Token.objects.get_or_create(user=user)
         serializer = Userserializer(instance=user)

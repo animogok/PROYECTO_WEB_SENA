@@ -6,7 +6,7 @@ Endpoint Number 1: Register, if the register its succesfull its gives:
 
 {
     "email" : "sebastian.avenda32@gmail.com",
-    "firsName" : "Sebastian":
+    "firsName" : "Sebastian",
     "lastName" : "Avendaño",
     "idNumber" : "1124820655",
     "password" : "1124Sebas."
