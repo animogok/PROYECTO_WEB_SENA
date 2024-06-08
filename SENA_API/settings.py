@@ -59,6 +59,20 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+LOGIN_URL = "/login-app/"
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    #...
+]
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # o 'django.contrib.sessions.backends.cached_db'
+
+SESSION_COOKIE_NAME = 'sessionid'  # nombre de la cookie de sesión
+
+SESSION_COOKIE_AGE = 600
+
 ROOT_URLCONF = 'SENA_API.urls'
 
 TEMPLATES = [

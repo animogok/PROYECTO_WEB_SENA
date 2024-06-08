@@ -1,0 +1,46 @@
+/*
+Endpoint Number 1: Register, if the register its succesfull its gives:
+    - HTTP_201_CREATED
+    - HTTP_400_BAD_REQUEST
+*/
+
+{
+    "email" : "sebastian.avenda32@gmail.com",
+    "firsName" : "Sebastian":
+    "lastName" : "Avendaño",
+    "idNumber" : "1124820655",
+    "password" : "1124Sebas."
+}
+
+------------------------------------------------------------------------------------------
+
+/*
+Endpoint Number 2: Login, if the login succesfull its gives:
+    - HTTP_202_ACCEPTED
+    - HTTP_401_UNAUTHORIZED
+    - HTTP_404_BAD_REQUEST
+*/
+
+{
+    "email" : "sebastian.avenda32@gmail.com",
+    "password" : "1124Sebas."
+}
+
+------------------------------------------------------------------------------------------
+
+/*
+Endpoint Number 3: Account settings, when the login its succesfull its gives the authtoken, to acces to other sites of the pages
+    - HTTP_202_ACCEPTED
+    - HTTP_400_BAD_REQUEST
+    - HTTP_404_BAD_REQUEST
+*/
+
+{
+    "actual_pass" : "1124Sebas.",
+    "new_pass" : "1124Sebas",
+    "confirm_pass", "1124Sebas"
+}
+
+{
+    "new_email" : "sebastian.avenda42@gmail.com"
+}

@@ -18,8 +18,9 @@
         </header>
 
         <form method="POST" class="loginForms" >
+            
             {% csrf_token %}
-
+            
             <div class ="email">
                 <h3 class ="fieldEmail">Email  </h3>
                 {{form.email}}

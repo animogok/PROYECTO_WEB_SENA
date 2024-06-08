@@ -27,6 +27,7 @@ class FormularioLogin(forms.Form):
     email = forms.CharField(widget=forms.EmailInput())
     password = forms.CharField(widget=forms.PasswordInput)
 
+
 class FormChangeData(forms.Form):
     email = forms.EmailInput()
     email_confirmation = forms.EmailInput()

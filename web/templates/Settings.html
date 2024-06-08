@@ -10,47 +10,29 @@
         <a href={% url "home" %}>HOME</a>
         <a href={% url "booking" %}>BOOKINGS</a>
         <a href={% url "menu" %}>MENU</a>
-        <a href={% url "signIn" %}>Sign In</a>
-        <a href={% url "login" %}>Login</a>
         <a href={% url "settings" %}>Settings</a>
+        <a href={% url "logout" %}>LOGOUT</a>
     </nav>
-
     <main>
-        {% block Validacion %}
-            {% if is_valid == False %}
-                <form method="POST" class="loginForms" >
-                    {% csrf_token %}
-                    <div class ="email">
-                        <h3 class ="fieldEmail">Email  </h3>
-                        {{form_auth.email}}
-                    </div>
+        <h1>Welcome {{user.firsName}} {{user.lastName}}</h1>
         
-                    <div class ="password">
-                        <h3 class ="fieldPassword">Password</h3>
-                        {{form_auth.password}}
-                    </div>
-                    <button class="submit" type = "input">Join</button><br>
-                <form/>
-            {% endif %}
-        {% endblock Validacion %}
-        
-        {% block ChangeEmail %}
-            {% if is_valid == True %}
-                <form method="POST" class="loginForms" >
-                    {% csrf_token %}
-                    <div class ="email">
-                        <h3 class ="fieldEmail">Email  </h3>
-                        {{form_EmailChange.email}}
-                    </div>
-        
-                    <div class ="password">
-                        <h3 class ="fieldPassword">Email confirmation</h3>
-                        {{form_EmailChange.email_confirmation}}
-                    </div>
-                    <button class="submit" type = "input">Join</button><br>
-                <form/>
-            {% endif %}
-        {% endblock ChangeEmail %}
+        <h3>Change password</h3>
+        <form method ="POST" name="change_password">
+            {% csrf_token %}
+            <input type="hidden" name="change_password" value="True"> <!-- Agregamos este campo hidden -->
+            <input name="actual_pass" type="password" placeholder="Actual password">
+            <input name="new_pass" type="password" placeholder="New password">
+            <input name="confirm_pass" type="password" placeholder="Confirm new password">
+            <button class="submit" type="submit">SUBMIT</button>
+        </form>
+
+        <h3>Change email</h3>
+            <form method ="POST" name="change_email">
+                {% csrf_token %}
+                <input type="hidden" name="change_email" value="True">
+                <input name ="new_email" type="email" placeholder="New email">
+                <button class="submit" type="submit">SUBMIT</button>
+            </form>
     </main>
 </body>
 </html>

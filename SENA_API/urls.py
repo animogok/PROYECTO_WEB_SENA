@@ -24,10 +24,11 @@ from web_backend import views as vwsb
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login-app/', vwsb.Loginview.as_view(), name="login"),
+    path('log-out', vwsb.logout_app, name="logout"),
     path('sign-in/', vwsb.RegisterView.as_view(), name="signIn"),
     path('', vws.home, name="home"),
     path('menu-restaurant/', vws.menu, name="menu"),
     path('list-booking', vws.booking, name="booking"),
-    path('account-settings/', vwsb.SettingsView.as_view(), name="settings")
+    path('account-settings/', vwsb.AccountSettings.as_view(), name="settings")
     
 ]

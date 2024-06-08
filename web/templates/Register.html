@@ -20,6 +20,8 @@
 
             <form method="POST" class="registerForm">
                 
+                {% csrf_token %}
+             
                 <div class="firstName">
                     <h3 class ="fieldNames">Name</h3>
                     {{form.firsName}}
