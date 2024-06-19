@@ -12,50 +12,38 @@
     <title>Register</title>
 </head>
 <body>
-
     <main>
-        <header class = "signInTitle">
+        <header class="signInTitle">
             <h1>Sign In</h1>
         </header>
 
-            <form method="POST" class="registerForm">
-                
-                {% csrf_token %}
-             
-                <div class="firstName">
-                    <h3 class ="fieldNames">Name</h3>
-                    {{form.firsName}}
-                </div>    
-
-                <div class="lastName">
-                    <h3 class ="fieldSurname">LastName</h3>
-                    {{form.lastName}}
-                </div>
-
-                <div class="email">
-                    <h3 class ="fieldemail">Email</h3>
-                    {{form.email}}
-                </div>
-
-                <div class="idNumber">
-                    <h3 class ="fieldId">ID Number</h3>
-                    {{form.idNumber}}
-                </div>
-
-                <div class="password">
-                    <h3 class ="fieldpassword">Password</h3>
-                    {{form.password}}
-                </div>
-
-                <button class="submit" type="input">Create Account</button>
-                
-                <div class="loginLink" >
-                    <a href={% url "login" %} style ="color:RGB(255,255,255)">Login</a>
-                </div>
-
-            </form>
-        
+        <form method="POST" class="registerForm">
+            {% csrf_token %}
+            <div class="firstName">
+                <h3 class="fieldNames">Name</h3>
+                {{ form.firsName }}
+            </div>    
+            <div class="lastName">
+                <h3 class="fieldSurname">LastName</h3>
+                {{ form.lastName }}
+            </div>
+            <div class="email">
+                <h3 class="fieldemail">Email</h3>
+                {{ form.email }}
+            </div>
+            <div class="idNumber">
+                <h3 class="fieldId">ID Number</h3>
+                {{ form.idNumber }}
+            </div>
+            <div class="password">
+                <h3 class="fieldpassword">Password</h3>
+                {{ form.password }}
+            </div>
+            <button class="submit" type="submit">Create Account</button>
+            <div class="loginLink">
+                <a href="{% url 'login' %}" style="color:RGB(255,255,255)">Login</a>
+            </div>
+        </form>
     </main>
-
 </body>
 </html>

@@ -28,7 +28,7 @@ urlpatterns = [
     path('sign-in/', vwsb.RegisterView.as_view(), name="signIn"),
     path('', vws.home, name="home"),
     path('menu-restaurant/', vws.menu, name="menu"),
-    path('list-booking', vws.booking, name="booking"),
+    path('list-booking/', vws.booking, name="booking"),
     path('account-settings/', vwsb.AccountSettings.as_view(), name="settings")
     
 ]
